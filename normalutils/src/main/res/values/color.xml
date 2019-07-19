@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="normal_bg">#F5F5F5</color>
+    <color name="normal_4a">#4A4A4A</color>
+    <color name="normal_9b">#2B292B</color>
+    <color name="normal_c">#EEEEEE</color>
+    <color name="line_color">#EEEEEE</color>
+    <color name="normal_fa">#FAFAFA</color>
+    <color name="white">#FFFFFF</color>
+</resources>
