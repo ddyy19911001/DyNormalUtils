@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.squareup.picasso.Picasso;
 
 import yin.deng.normalutils.utils.LogUtils;
+import yin.deng.normalutils.utils.MyFileUtils;
 import yin.deng.normalutils.utils.SnackbarUtils;
 import yin.deng.normalutils.view.CircleImageView;
 
