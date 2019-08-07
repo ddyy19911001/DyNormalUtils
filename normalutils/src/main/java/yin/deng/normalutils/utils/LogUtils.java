@@ -46,7 +46,7 @@ public class LogUtils {
     public static int typeW = 4;
     public static int typeWtf = 5;
     private static String generateTag(StackTraceElement caller) {
-        String tag = "%s.%s(输出Line:%d)"; // 占位符
+        String tag = "%s.%s(DYLOG行号:%d)"; // 占位符
         String callerClazzName = caller.getClassName(); // 获取到类名
         callerClazzName = callerClazzName.substring(callerClazzName
                 .lastIndexOf(".") + 1);
@@ -76,7 +76,7 @@ public class LogUtils {
             }else if(type==typeV){
                 Log.v(tag, msg);
             }else if(type==typeI){
-                Log.v(tag, msg);
+                Log.i(tag, msg);
             }else if(type==typeW){
                 Log.w(tag, msg);
             }else{
