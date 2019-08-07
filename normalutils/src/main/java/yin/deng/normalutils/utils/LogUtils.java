@@ -65,7 +65,7 @@ public class LogUtils {
         if (tag == null || tag.length() == 0
                 || msg == null || msg.length() == 0)
             return;
-        msg="日志信息如下：\n"+msg;
+        msg="---------------------------------------------------------\r\n"+msg;
         int segmentSize = 3 * 1024;
         long length = msg.length();
         if (length <= segmentSize ) {// 长度小于等于限制直接打印
