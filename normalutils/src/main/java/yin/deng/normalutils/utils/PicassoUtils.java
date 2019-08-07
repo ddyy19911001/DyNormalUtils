@@ -118,6 +118,18 @@ public class PicassoUtils {
     public void LoadImage(Context context,String path,ImageView imageView){
             Picasso.with(context).load(path).placeholder(R.drawable.image_replace).error(R.drawable.image_replace).into(imageView);
     }
+
+    public void LoadImage(Context context,String path,int width,int height,ImageView.ScaleType scaleType,ImageView imageView){
+        if(scaleType.equals(ImageView.ScaleType.CENTER_CROP)) {
+            Picasso.with(context).load(path).placeholder(R.drawable.image_replace).error(R.drawable.image_replace).resize(width,height).centerCrop().into(imageView);
+        }else if(scaleType.equals(ImageView.ScaleType.CENTER_INSIDE)){
+            Picasso.with(context).load(path).placeholder(R.drawable.image_replace).error(R.drawable.image_replace).resize(width,height).centerInside().into(imageView);
+        }else if(scaleType.equals(ImageView.ScaleType.FIT_XY)){
+            Picasso.with(context).load(path).placeholder(R.drawable.image_replace).error(R.drawable.image_replace).resize(width,height).fit().into(imageView);
+        }else{
+            Picasso.with(context).load(path).placeholder(R.drawable.image_replace).error(R.drawable.image_replace).resize(width,height).into(imageView);
+        }
+    }
     /**
      * 加载图片本地 通过id
      * @param context
