@@ -47,7 +47,7 @@ public class MyFileUtils {
 
 	
 	//得到当前外部存储设备的目录
-	public static final String CACHE_DIRECTORY =  Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator;  
+	public static final String CACHE_DIRECTORY =  Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator;
 	
 	//存储图片目录路径
 	public static final String CACHE_IMAGE_PATH = "DyUtils/cache/others/images/";

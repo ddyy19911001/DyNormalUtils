@@ -3,7 +3,10 @@ package yin.deng.normalutils.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.text.TextUtils;
 import android.util.Log;
+
+import com.google.gson.Gson;
 
 import java.util.HashSet;
 
@@ -14,10 +17,12 @@ public class SharedPreferenceUtil {
     private Context context;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
-    private String Tag="SharedPreferenceUtil";
+    private String Tag="DataSave-DyLog";
+    private Gson gson;
 
     public SharedPreferenceUtil(Context context,String nameKey) {
         this.context = context;
+        gson=new Gson();
         sharedPreferences = context.getSharedPreferences(nameKey, Activity.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }
@@ -46,18 +51,27 @@ public class SharedPreferenceUtil {
         showSuccessLog(tag, s);
     }
 
-    public void saveSetMap(String tag, HashSet<String> map) {
-        editor.putStringSet(tag, map);
-        editor.commit();
-        showSuccessLog(tag, "mapSaveSuccess!");
-    }
+   public void saveObject(String tag,Object object){
+        if(object==null){
+            return;
+        }
+       try {
+           String objStr= gson.toJson(object);
+           saveString(tag,objStr);
+           showSuccessLog(tag, objStr);
+       }catch (Exception e){
+           e.printStackTrace();
+       }
+   }
+
+
 
     public void clearString(String tag) {
         editor.putString(tag, null);
     }
 
     public void clearLong(String tag) {
-        editor.putLong(tag, -1);
+        editor.putLong(tag, 0L);
     }
 
     public void clearAll() {
@@ -69,24 +83,36 @@ public class SharedPreferenceUtil {
     }
 
     public int getInt(String key) {
-        return sharedPreferences.getInt(key, -1);
+        return sharedPreferences.getInt(key, 0);
     }
 
     public String getStr(String key) {
-        return sharedPreferences.getString(key, "");
+        return sharedPreferences.getString(key, null);
     }
 
     public long getLong(String key) {
-        return sharedPreferences.getLong(key, -1L);
+        return sharedPreferences.getLong(key, 0L);
     }
 
     public boolean getBoolean(String key) {
         return sharedPreferences.getBoolean(key, false);
     }
 
-    public HashSet<String> getSetMap(String key) {
-        return (HashSet<String>) sharedPreferences.getStringSet(key, null);
+    public Object getObj(String key,Class clzz){
+        String objStr=sharedPreferences.getString(key, null);
+        try {
+            if(TextUtils.isEmpty(objStr)){
+                return null;
+            }else{
+                return gson.fromJson(objStr, clzz);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
     }
+
+
 
 
     private void showSuccessLog(String tag, String s) {
