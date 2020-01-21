@@ -52,52 +52,52 @@ public class ImageLoadUtil {
     public static void loadImage(ImageView view, String picUrl){
         checkInit();
         if(mPlaceHolder!=0&&mErroHolder!=0) {
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else if(mPlaceHolder==0&&mErroHolder==0){
-            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else if(mPlaceHolder==0&&mErroHolder!=0){
-            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else{
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }
     }
 
     public static void loadImage(ImageView view, int picUrl){
         checkInit();
         if(mPlaceHolder!=0&&mErroHolder!=0) {
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else if(mPlaceHolder==0&&mErroHolder==0){
-            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else if(mPlaceHolder==0&&mErroHolder!=0){
-            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else{
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }
     }
 
     public static void loadImageThumb(ImageView view, int picUrl){
         checkInit();
         if(mPlaceHolder!=0&&mErroHolder!=0) {
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else if(mPlaceHolder==0&&mErroHolder==0){
-            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else if(mPlaceHolder==0&&mErroHolder!=0){
-            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else{
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }
     }
 
     public static void loadImageThumb(ImageView view, String picUrl){
         checkInit();
         if(mPlaceHolder!=0&&mErroHolder!=0) {
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else if(mPlaceHolder==0&&mErroHolder==0){
-            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else if(mPlaceHolder==0&&mErroHolder!=0){
-            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else{
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }
     }
 
@@ -108,13 +108,13 @@ public class ImageLoadUtil {
             mErroHolder=placeholder;
         }
         if(mPlaceHolder!=0&&mErroHolder!=0) {
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else if(mPlaceHolder==0&&mErroHolder==0){
-            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else if(mPlaceHolder==0&&mErroHolder!=0){
-            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else{
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }
     }
 
@@ -128,13 +128,13 @@ public class ImageLoadUtil {
             mErroHolder=erroHolder;
         }
         if(mPlaceHolder!=0&&mErroHolder!=0) {
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else if(mPlaceHolder==0&&mErroHolder==0){
-            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else if(mPlaceHolder==0&&mErroHolder!=0){
-            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).error(mErroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }else{
-            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(mPlaceHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).override(view.getWidth()).into(view);
         }
     }
 
@@ -142,22 +142,22 @@ public class ImageLoadUtil {
     public static void loadImage(ImageView view, int picUrl, int placeHolder, int erroHolder){
         checkInit();
         if(placeHolder!=0&&erroHolder!=0) {
-            Glide.with(mContext).load(picUrl).placeholder(placeHolder).error(erroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(placeHolder).error(erroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else if(placeHolder==0&&erroHolder==0){
-            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else if(placeHolder==0&&erroHolder!=0){
-            Glide.with(mContext).load(picUrl).error(erroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).error(erroHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else{
-            Glide.with(mContext).load(picUrl).placeholder(placeHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(placeHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }
     }
 
     public static void loadImage(ImageView view, int picUrl, int placeHolder){
         checkInit();
         if(placeHolder!=0) {
-            Glide.with(mContext).load(picUrl).placeholder(placeHolder).error(placeHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).placeholder(placeHolder).error(placeHolder).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }else{
-            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(new MySimpleTargetImage(mContext, view));
+            Glide.with(mContext).load(picUrl).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(view);
         }
     }
 

@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv=findViewById(R.id.iv_img);
-        ImageLoadUtil.initOptions(this);
-        ImageLoadUtil.loadImage(tv,"http://6vdapi.hzyyd.top/storage/img/2020-01-14/15-15-08-5e1d6a7ca4072.png");
+        ImageLoadUtil.initOptions(this,R.mipmap.ic_default_star_img);
+        ImageLoadUtil.loadImageThumb(tv,"http://a6vdapi.hzyyd.top/storage/img/2020-01-14/15-15-08-5e1d6a7ca4072.png");
     }
 
 }
