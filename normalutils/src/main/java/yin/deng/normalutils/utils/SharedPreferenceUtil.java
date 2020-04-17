@@ -76,6 +76,7 @@ public class SharedPreferenceUtil {
 
     public void clearAll() {
         editor.clear();
+        editor.commit();
     }
 
     public SharedPreferences.Editor getEditor() {

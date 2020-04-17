@@ -340,6 +340,32 @@ public class MyFileUtils {
 			return fileContentStr;
 	}
 
+
+	/**
+	 * 从SdCard中读取文件内容
+	 * @param path
+	 * @return String
+	 */
+	public static String readFileFromAbsPath(String path) {
+		FileReader fr = null;
+		String fileContentStr = "";
+		try {
+			fr = new FileReader(path);
+			// 可以换成工程目录下的其他文本文件
+			BufferedReader br = new BufferedReader(fr);
+			String str = "";
+			while ((str = br.readLine()) != null) {
+				fileContentStr += str;
+			}
+			br.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+			LogUtils.e("AppFileMgr-->>readFileFromSdCard:"+"从SdCard中读取文件内容失败！" + e.getMessage());
+		}
+		LogUtils.i("AppFileMgr-->>readFileFromSdCard-->>cacheFileName:"+path);
+		LogUtils.i("AppFileMgr-->>readFileFromSdCard:"+"从SdCard中读取文件内容成功！");
+		return fileContentStr;
+	}
 	    
 	    
 	/**
@@ -627,7 +653,11 @@ public class MyFileUtils {
 	 * @return void   
 	 */
 	public static void writeFile(String path, String value) throws IOException {
-		FileOutputStream fos = new FileOutputStream(new File(path));
+		File file=new File(path);
+		if(!file.exists()){
+			file.mkdirs();
+		}
+		FileOutputStream fos = new FileOutputStream(file);
 		OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
 		BufferedWriter bw = new BufferedWriter(osw);
 		bw.write(value);
